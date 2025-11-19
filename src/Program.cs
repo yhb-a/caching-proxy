@@ -11,13 +11,13 @@ public class Program
     {
         // Build configuration from command-line arguments
         var configurationBuilder = new ConfigurationBuilder();
-        
+
         configurationBuilder.AddCommandLine(args);
         var config = configurationBuilder.Build();
 
         var portNumber = config.GetValue<int>("port"); // port on which the caching proxy server will run.
-        var url = config.GetValue<string>("url"); // URL of the resource to be fetched and cached.
-        var clearCache = config.GetValue<bool>("clear-cache"); // flag to clear the cache for the specified URL.
+        var url = config.GetValue<string>("url"); // URL of the resource to be fetched and cached.     
+        bool clearCache = config.GetValue<bool>("clear-cache");
 
         Console.WriteLine($"Listening on port: {portNumber}");
         Console.WriteLine($"Fetching URL: {url}");

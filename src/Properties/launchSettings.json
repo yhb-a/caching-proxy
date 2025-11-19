@@ -1,0 +1,8 @@
+{
+  "profiles": {
+    "caching-proxy": {
+      "commandName": "Project",
+      "commandLineArgs": "--port 4122 --url http://dummyjson.com/products --clear-cache\r\n"
+    }
+  }
+}
